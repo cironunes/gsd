@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component renders 1`] = `
+<div>
+  <form>
+    <span>
+      hi
+    </span>
+  </form>
+  <form>
+    <span>
+      hi
+    </span>
+  </form>
+</div>
+`;
