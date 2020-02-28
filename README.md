@@ -6,9 +6,9 @@ An opinionated ReasonML template with batteries included.
 
 | Feature             | Description                                                    |
 | ------------------- | -------------------------------------------------------------- |
-| GraphQL integration | React Apollo (GraphQL)                                         |
 | Testing             | Unit & Integration Testing with Jest and React Testing Library |
-| Styling             | Css-in-JS with bs-css and re-classnames                        |
+| Styling             | _coming soon_ Css-in-JS with bs-css and re-classnames          |
+| GraphQL integration | _coming soon_ React Apollo (GraphQL)                           |
 | Theming?            | _coming soon_                                                  |
 
 ## 🚀 Get started

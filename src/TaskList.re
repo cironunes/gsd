@@ -18,9 +18,12 @@ let make = (~items: list(task), ~onItemCompleted, ~onItemDeleted) => {
                 </Util.WithTestId>
                 item.content->React.string
               </label>
-              <WithTestId id={"task--remove-button-" ++ item.id->string_of_int}>
-                <button onClick={_ => onItemDeleted(item.id)}> "x"->React.string </button>
-              </WithTestId>
+              <Button
+                size=Small
+                onClick={_ => onItemDeleted(item.id)}
+                dataTestid={"task--remove-button-" ++ item.id->string_of_int}>
+                "x"->React.string
+              </Button>
             </li>
           })
        |> Array.of_list

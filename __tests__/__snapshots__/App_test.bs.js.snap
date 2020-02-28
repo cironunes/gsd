@@ -2,51 +2,76 @@
 
 exports[`Component renders 1`] = `
 <div>
-  <form>
-    <input
-      data-testid="task--add-input"
-      placeholder="What's next? 🤔"
-      type="text"
-      value=""
-    />
-    <button
-      data-testid="task--add-button"
-    >
-      Add to list
-    </button>
-  </form>
-  <ol
-    data-testid="task--list"
+  <div
+    class="css-1rbvawu"
   >
-    <li>
-      <label>
-        <input
-          checked=""
-          data-testid="task--completion-checkbox"
-          type="checkbox"
-        />
-        Learn Reason
-      </label>
-      <button
-        data-testid="task--remove-button-1"
-      >
-        x
+    <div>
+      <button>
+        Default
       </button>
-    </li>
-    <li>
-      <label>
-        <input
-          data-testid="task--completion-checkbox"
-          type="checkbox"
-        />
-        Present at SydCSS
-      </label>
-      <button
-        data-testid="task--remove-button-2"
-      >
-        x
+      <button>
+        Dark mode
       </button>
-    </li>
-  </ol>
+      <button>
+        Rainbow
+      </button>
+      <button>
+        Rainbow Dark
+      </button>
+    </div>
+    <h1>
+      Get 💩 Done
+    </h1>
+    <form>
+      <input
+        class="css-qtbh1t"
+        data-testid="task--add-input"
+        placeholder="What's next? 🤔"
+        type="text"
+        value=""
+      />
+      <button
+        class="css-10rinh2"
+        data-testid="task--add-button"
+      >
+        Add to list
+      </button>
+    </form>
+    <ol
+      data-testid="task--list"
+    >
+      <li>
+        <label>
+          <input
+            checked=""
+            data-testid="task--completion-checkbox"
+            type="checkbox"
+          />
+          Learn Reason
+        </label>
+        <button
+          class="css-1aug4hs"
+          data-testid="task--remove-button-1"
+        >
+          x
+        </button>
+      </li>
+      <li>
+        <label>
+          <input
+            data-testid="task--completion-checkbox"
+            type="checkbox"
+          />
+          Present at SydCSS
+        </label>
+        <button
+          class="css-1aug4hs"
+          data-testid="task--remove-button-2"
+        >
+          x
+        </button>
+      </li>
+    </ol>
+  </div>
 </div>
 `;

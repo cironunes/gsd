@@ -1,23 +1,28 @@
-open Task;
-
-let initialState = {
-  todos: [
-    {id: 1, content: "Learn Reason", completed: true},
-    {id: 2, content: "Present at SydCSS", completed: false},
-  ],
-};
-
 let getNextId = () => Js.Date.make() |> Js.Date.getTime |> int_of_float;
+
+module Styles = {
+  Theme.globalStyles();
+};
 
 [@react.component]
 let make = () => {
-  let (state, dispatch) = React.useReducer(reducer, initialState);
-  <>
-    <TaskForm onCreate={content => Add(content, getNextId())->dispatch} />
-    <TaskList
-      items={state.todos}
-      onItemCompleted={id => Complete(id)->dispatch}
-      onItemDeleted={id => Remove(id)->dispatch}
-    />
-  </>;
+  let (theme, changeTheme) = React.useState(_ => Theme.default);
+
+  <div className={Theme.containerStyles(theme)}>
+    <div>
+      <button onClick={_ => changeTheme(_ => Theme.default)}>
+        "Default"->React.string
+      </button>
+      <button onClick={_ => changeTheme(_ => Theme.defaultDark)}>
+        "Dark mode"->React.string
+      </button>
+      <button onClick={_ => changeTheme(_ => Theme.rainbow)}>
+        "Rainbow"->React.string
+      </button>
+      <button onClick={_ => changeTheme(_ => Theme.rainbowDark)}>
+        "Rainbow Dark"->React.string
+      </button>
+    </div>
+    <ThemeContext value=theme> <TaskContainer getNextId /> </ThemeContext>
+  </div>;
 };

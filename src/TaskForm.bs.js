@@ -2,7 +2,8 @@
 
 var Curry = require("bs-platform/lib/js/curry.js");
 var React = require("react");
-var Util$ReasonReactExamples = require("./Util.bs.js");
+var Input$Gsd = require("./components/Input.bs.js");
+var Button$Gsd = require("./components/Button.bs.js");
 
 function TaskForm(Props) {
   var onCreate = Props.onCreate;
@@ -19,19 +20,18 @@ function TaskForm(Props) {
                                 return "";
                               }));
                 })
-            }, React.createElement(Util$ReasonReactExamples.WithTestId.make, {
-                  id: "task--add-input",
-                  children: React.createElement("input", {
-                        placeholder: "What\'s next? 🤔",
-                        type: "text",
-                        value: content,
-                        onChange: (function (e) {
-                            return Curry._1(setContent, e.target.value);
-                          })
-                      })
-                }), React.createElement(Util$ReasonReactExamples.WithTestId.make, {
-                  id: "task--add-button",
-                  children: React.createElement("button", undefined, "Add to list")
+            }, React.createElement(Input$Gsd.make, {
+                  type_: "text",
+                  value: content,
+                  onChange: (function (e) {
+                      return Curry._1(setContent, e.target.value);
+                    }),
+                  placeholder: "What\'s next? 🤔",
+                  dataTestid: "task--add-input"
+                }), React.createElement(Button$Gsd.make, {
+                  children: "Add to list",
+                  dataTestid: "task--add-button",
+                  variant: /* Primary */1
                 }));
 }
 

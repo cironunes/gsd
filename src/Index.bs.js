@@ -1,9 +1,9 @@
 'use strict';
 
 var React = require("react");
+var App$Gsd = require("./App.bs.js");
 var ReactDOMRe = require("reason-react/src/ReactDOMRe.js");
-var App$ReasonReactExamples = require("./App.bs.js");
 
-ReactDOMRe.renderToElementWithId(React.createElement(App$ReasonReactExamples.make, { }), "app");
+ReactDOMRe.renderToElementWithId(React.createElement(App$Gsd.make, { }), "app");
 
 /*  Not a pure module */

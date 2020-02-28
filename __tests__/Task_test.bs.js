@@ -2,7 +2,7 @@
 
 var Jest = require("@glennsl/bs-jest/src/jest.js");
 var Block = require("bs-platform/lib/js/block.js");
-var Task$ReasonReactExamples = require("../src/Task.bs.js");
+var Task$Gsd = require("../src/Task.bs.js");
 
 var todos = /* :: */[
   {
@@ -22,7 +22,7 @@ var todos = /* :: */[
 
 Jest.describe("reducer", (function (param) {
         Jest.test("add", (function (param) {
-                var actual = Task$ReasonReactExamples.reducer({
+                var actual = Task$Gsd.reducer({
                       todos: todos
                     }, /* Add */Block.__(0, [
                         "Be a good person",
@@ -54,7 +54,7 @@ Jest.describe("reducer", (function (param) {
                           }, Jest.Expect.expect(actual));
               }));
         Jest.test("remove", (function (param) {
-                var actual = Task$ReasonReactExamples.reducer({
+                var actual = Task$Gsd.reducer({
                       todos: todos
                     }, /* Remove */Block.__(1, [2]));
                 return Jest.Expect.toEqual({
@@ -69,7 +69,7 @@ Jest.describe("reducer", (function (param) {
                           }, Jest.Expect.expect(actual));
               }));
         return Jest.test("completed", (function (param) {
-                      var actual = Task$ReasonReactExamples.reducer({
+                      var actual = Task$Gsd.reducer({
                             todos: todos
                           }, /* Complete */Block.__(2, [1]));
                       return Jest.Expect.toEqual({
