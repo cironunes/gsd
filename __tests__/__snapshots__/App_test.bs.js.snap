@@ -3,14 +3,50 @@
 exports[`Component renders 1`] = `
 <div>
   <form>
-    <span>
-      hi
-    </span>
+    <input
+      data-testid="task--add-input"
+      placeholder="What's next? 🤔"
+      type="text"
+      value=""
+    />
+    <button
+      data-testid="task--add-button"
+    >
+      Add to list
+    </button>
   </form>
-  <form>
-    <span>
-      hi
-    </span>
-  </form>
+  <ol
+    data-testid="task--list"
+  >
+    <li>
+      <label>
+        <input
+          checked=""
+          data-testid="task--completion-checkbox"
+          type="checkbox"
+        />
+        Learn Reason
+      </label>
+      <button
+        data-testid="task--remove-button-1"
+      >
+        x
+      </button>
+    </li>
+    <li>
+      <label>
+        <input
+          data-testid="task--completion-checkbox"
+          type="checkbox"
+        />
+        Present at SydCSS
+      </label>
+      <button
+        data-testid="task--remove-button-2"
+      >
+        x
+      </button>
+    </li>
+  </ol>
 </div>
 `;

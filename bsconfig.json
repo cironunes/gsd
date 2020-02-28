@@ -24,7 +24,8 @@
     "reason-react",
     "reason-apollo",
     "bs-css",
-    "re-classnames"
+    "re-classnames",
+    "bs-webapi"
   ],
   "ppx-flags": ["@baransu/graphql_ppx_re/ppx6"],
   "refmt": 3
